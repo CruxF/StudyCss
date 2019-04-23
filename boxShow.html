@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      body,html {
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+      }
+      .des {
+        color: blueviolet;
+      }
+      .set {
+        margin: 50px 50px 0 30px;
+        height: 180px;
+        width: 180px;
+        float: left;
+        border: 8px solid burlywood;
+      }
+      .set-box {
+        margin: 50px 50px 0 40px;
+        float: left;
+        border: 1px solid red;
+        padding: 30px;
+        width: 55%;
+        height: 60vh;
+        overflow-y: scroll;
+      }
+      .set-box p {
+        display: inline-block;
+        width: 200px;
+        padding: 10px;
+        border: 1px solid #666;
+        border-radius: 5px;
+      }
+      .set-box p:hover {
+        cursor: pointer;
+      }
+      p span {
+        color: royalblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="des">box-shadow: offset-x(X轴偏移量) offset-y(Y轴偏移量) blur(阴影模糊半径) spread(阴影扩展) color(阴影颜色) inset(投影方式);</div>
+    <div class="set" id="set"></div>
+    <div class="set-box">
+      <p>通过设置blur产生阴影效果(水平垂直偏移为0也可以有阴影)：<span>box-shadow: 0 0 20px;</span></p>
+      <p>通过设置spread正值产生阴影效果(水平垂直偏移为0也可以有阴影)：<span>box-shadow: 0 0 20px 5px;</span></p>
+      <p>通过设置spread负值产生阴影效果(水平垂直偏移为0也可以有阴影)：<span>box-shadow: 0 0 20px -5px;</span></p>
+      <hr />
+      <p>通过设置水平垂直偏移得到阴影效果：<span>box-shadow: 0 0;</span></p>
+      <p>通过设置水平垂直偏移得到阴影效果：<span>box-shadow: 1px 1px;</span></p>
+      <p>通过设置水平垂直偏移得到阴影效果：<span>box-shadow: 10px 10px;</span></p>
+      <p>通过设置水平垂直偏移得到阴影效果：<span>box-shadow: 0 0 inset;</span></p>
+      <p>通过设置水平垂直偏移得到阴影效果：<span>box-shadow: 1px 1px inset;</span></p>
+      <p>通过设置水平垂直偏移得到阴影效果：<span>box-shadow: 10px 10px inset;</span></p>
+      <hr />
+      <p>投影方式：<span>box-shadow: 10px 10px teal;</span></p>
+      <p>投影方式：<span>box-shadow: 10px 10px teal inset;</span></p>
+      <p>投影方式：<span>box-shadow: 10px 10px teal inset,10px 10px teal;</span></p>
+      <hr />
+      <p>如果元素同时指定border-radius属性，则阴影呈现相同的圆角：<span>box-shadow: 0 0 10px 10px green;</span></p>
+      <hr />
+      <p>多重阴影：<span>box-shadow: 0 -5px red,5px 0 orange,0 5px yellow,-5px 0 green;</span></p>
+      <p>多重阴影：<span>box-shadow: 0 -5px 5px red,5px 0 5px orange,0 5px 5px yellow,-5px 0 5px green;</span></p>
+      <p>多重阴影：<span>box-shadow: 0 -5px 50px red,5px 0 5px orange,0 5px 5px yellow,-5px 0 5px green;</span></p>
+      <hr />
+      <p>用spread模拟实现border：<span>box-shadow: 0 0 0 1px red;</span></p>
+      <p>用spread模拟实现border：<span>box-shadow: 0 0 0 3px red,0 0 0 6px green,0 0 0 9px blue;</span></p>
+      <hr />
+      <p>用spread实现双色方括号：<span>box-shadow: -30px -30px 0 -25px red,30px 30px  0 -25px green;</span></p>
+    </div>
+
+    <script>
+      let set = document.getElementById("set")
+      let ps = document.getElementsByTagName("p")
+      ps[0].onclick = function(){
+        set.style.boxShadow = "0 0 20px"
+      }
+      ps[1].onclick = function(){
+        set.style.boxShadow = "0 0 20px 5px"
+      }
+      ps[2].onclick = function(){
+        set.style.boxShadow = "0 0 20px -5px"
+      }
+
+      ps[3].onclick = function(){
+        set.style.boxShadow = "0 0"
+      }
+      ps[4].onclick = function(){
+        set.style.boxShadow = "1px 1px"
+      }
+      ps[5].onclick = function(){
+        set.style.boxShadow = "10px 10px"
+      }
+      ps[6].onclick = function(){
+        set.style.boxShadow = "0 0 inset"
+      }
+      ps[7].onclick = function(){
+        set.style.boxShadow = "1px 1px inset"
+      }
+      ps[8].onclick = function(){
+        set.style.boxShadow = "10px 10px inset"
+      }
+
+      ps[9].onclick = function(){
+        set.style.boxShadow = "10px 10px teal"
+      }
+      ps[10].onclick = function(){
+        set.style.boxShadow = "10px 10px teal inset"
+      }
+      ps[11].onclick = function(){
+        set.style.boxShadow = "10px 10px teal inset,10px 10px teal"
+      }
+
+      ps[12].onclick = function(){
+        set.style.boxShadow = "0 0 10px 10px green"
+        set.style.borderRadius = "50%"
+      }
+
+      ps[13].onclick = function(){
+        set.style.boxShadow = " 0 -5px red,5px 0 orange,0 5px yellow,-5px 0 green"
+      }
+      ps[14].onclick = function(){
+        set.style.boxShadow = "0 -5px 5px red,5px 0 5px orange,0 5px 5px yellow,-5px 0 5px green"
+      }
+      ps[15].onclick = function(){
+        set.style.boxShadow = "0 -5px 50px red,5px 0 5px orange,0 5px 5px yellow,-5px 0 5px green"
+      }
+
+      ps[16].onclick = function(){
+        set.style.boxShadow = "0 0 0 1px red"
+      }
+      ps[17].onclick = function(){
+        set.style.boxShadow = "0 0 0 3px red,0 0 0 6px green,0 0 0 9px blue"
+      }
+
+      ps[18].onclick = function(){
+        set.style.boxShadow = "-30px -30px 0 -25px red,30px 30px  0 -25px green"
+      }
+    </script>
+  </body>
+</html>
