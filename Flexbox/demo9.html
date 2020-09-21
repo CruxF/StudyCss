@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>align-self</title>
+    <style>
+      .box, .boxTwo, .boxThree, .boxFour, .boxFive, .boxSix {
+        margin-top: 20px;
+      }
+      .box {
+        display: flex;
+        display: -webkit-flex;
+        height: 350px;
+        width: 800px;
+        border: 1px solid #FFA500;
+      }
+      .item1, .item2, .item3 {
+        background: #FFA500;
+        padding: 10px;
+        height: 100px;
+        width: 180px;
+        margin-right: 10px;
+        text-align: center;
+      }
+      .item2 {
+        height: 150px;
+        align-self: auto;
+      }
+      .boxTwo {
+        display: flex;
+        display: -webkit-flex;
+        height: 350px;
+        width: 800px;
+        border: 1px solid green;
+      }
+      .item4, .item5, .item6 {
+        background: green;
+        padding: 10px;
+        height: 100px;
+        width: 180px;
+        margin-right: 10px;
+        text-align: center;
+      }
+      .item5 {
+        height: 200px;
+        align-self: flex-start;
+      }
+      .boxThree {
+        display: flex;
+        display: -webkit-flex;
+        height: 300px;
+        width: 800px;
+        border: 1px solid blueviolet;
+      }
+      .item7, .item8, .item9 {
+        background: blueviolet;
+        padding: 10px;
+        height: 100px;
+        width: 180px;
+        margin-right: 10px;
+        text-align: center;
+      }
+      .item8 {
+        height: 170px;
+        align-self: flex-end;
+      }
+      .boxFour {
+        display: flex;
+        display: -webkit-flex;
+        height: 300px;
+        width: 800px;
+        border: 1px solid brown;
+      }
+      .item10, .item11, .item12 {
+        background: brown;
+        padding: 10px;
+        height: 100px;
+        width: 180px;
+        margin-right: 10px;
+        text-align: center;
+      }
+      .item11 {
+        height: 130px;
+        align-self: center;
+      }
+      .boxFive {
+        display: flex;
+        display: -webkit-flex;
+        height: 300px;
+        width: 800px;
+        border: 1px solid royalblue;
+      }
+      .item13, .item14, .item15 {
+        background: royalblue;
+        padding: 10px;
+        height: 100px;
+        width: 180px;
+        margin-right: 10px;
+        text-align: center;
+      }
+      .item14 {
+        height: 190px;
+        font-size: 28px;
+        align-self: baseline;
+      }
+      .boxSix {
+        display: flex;
+        display: -webkit-flex;
+        height: 300px;
+        width: 800px;
+        border: 1px solid greenyellow;
+      }
+      .item16, .item17, .item18 {
+        background: greenyellow;
+        padding: 10px;
+        height: 100px;
+        width: 180px;
+        margin-right: 10px;
+        text-align: center;
+      }
+      .item17 {
+        height: 170px;
+        align-self: stretch;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="item1">1</div>
+      <div class="item2">autou</div>
+      <div class="item3">3</div>
+    </div>
+    <div class="boxTwo">
+      <div class="item4">1</div>
+      <div class="item5">flex-start2</div>
+      <div class="item6">3</div>
+    </div>
+    <div class="boxThree">
+      <div class="item7">1</div>
+      <div class="item8">flex-end2</div>
+      <div class="item9">3</div>
+    </div>
+    <div class="boxFour">
+      <div class="item10">1</div>
+      <div class="item11">center2</div>
+      <div class="item12">3</div>
+    </div>
+    <div class="boxFive">
+      <div class="item13">1</div>
+      <div class="item14">baseline2</div>
+      <div class="item15">3</div>
+    </div>
+    <div class="boxSix">
+      <div class="item16">1</div>
+      <div class="item17">stretch2</div>
+      <div class="item18">3</div>
+    </div>
+  </body>
+</html>

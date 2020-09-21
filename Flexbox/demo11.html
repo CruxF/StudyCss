@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>flex-shrink</title>
+    <style>
+      .box {
+        display: flex;
+        display: -webkit-flex;
+      }
+      .item1, .item2, .item3 {
+        background: #FFA500;
+        padding: 10px;
+        height: 100px;
+        width: 400px;
+        margin-right: 10px;
+        text-align: center;
+      }
+      .item2 {
+        flex-shrink: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="item1">flex-shrink</div>
+      <div class="item2">flex-shrink</div>
+      <div class="item3">flex-shrink</div>
+    </div>
+  </body>
+</html>

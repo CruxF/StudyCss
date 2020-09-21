@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>flex-wrap</title>
+    <style>
+      .box {
+        display: flex;
+        display: -webkit-flex;
+      }
+      .item1, .item2, .item3, .item4, .item5, .item6 {
+        background: #FFA500;
+        padding: 10px;
+        height: 100px;
+        width: 180px;
+        margin-top: 10px;
+        margin-right: 10px;
+        text-align: center;
+      }
+      .boxTwo {
+        display: flex;
+        display: -webkit-flex;
+        flex-wrap: wrap;
+      }
+      .item7, .item8, .item9, .item10, .item11, .item12 {
+        background: blueviolet;
+        padding: 10px;
+        height: 100px;
+        width: 180px;
+        margin-top: 10px;
+        margin-right: 10px;
+        text-align: center;
+      }
+      .boxThree {
+        display: flex;
+        display: -webkit-flex;
+        flex-wrap: wrap-reverse;
+      }
+      .item13, .item14, .item15, .item16, .item17, .item18 {
+        background: brown;
+        padding: 10px;
+        height: 100px;
+        width: 180px;
+        margin-top: 10px;
+        margin-right: 10px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="item1">nowrap1</div>
+      <div class="item2">nowrap2</div>
+      <div class="item3">nowrap3</div>
+      <div class="item4">nowrap4</div>
+      <div class="item5">nowrap5</div>
+      <div class="item6">nowrap6</div>
+    </div>
+    <div class="boxTwo">
+      <div class="item7">wrap1</div>
+      <div class="item8">wrap2</div>
+      <div class="item9">wrap3</div>
+      <div class="item10">wrap4</div>
+      <div class="item11">wrap5</div>
+      <div class="item12">wrap6</div>
+    </div>
+    <div class="boxThree">
+      <div class="item13">wrap-reverse1</div>
+      <div class="item14">wrap-reverse2</div>
+      <div class="item15">wrap-reverse3</div>
+      <div class="item16">wrap-reverse4</div>
+      <div class="item17">wrap-reverse5</div>
+      <div class="item18">wrap-reverse6</div>
+    </div>
+  </body>
+</html>

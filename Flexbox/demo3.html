@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>order</title>
+    <style>
+      .box {
+        display: flex;
+        display: -webkit-flex;
+      }
+      .item1, .item2, .item3 {
+        background: #FFA500;
+        padding: 10px;
+        height: 100px;
+        width: 80px;
+        margin-top: 10px;
+        margin-right: 10px;
+        text-align: center;
+      }
+      .item2 {
+        order: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="item1">order0</div>
+      <div class="item2">order1</div>
+      <div class="item3">order0</div>
+    </div>
+  </body>
+</html>
